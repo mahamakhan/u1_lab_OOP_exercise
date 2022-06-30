@@ -4,53 +4,55 @@
 
 ## Getting Started
 
-- Fork and Clone
+- Fork and clone this repository
 - `npm install` in this directory
 
 ## Overview
 
-In this exercise, you'll use object oriented programming to create a school system. There are **32** tests that you have to pass. We'll utilize `inheritance` to create a blueprint for several schools. **You should be running the tests after each step with `npm test`.**
+In this exercise, you will practice the principles object oriented programming to create a school system. There are **32** automated tests that you have to pass. You will also utilize the concept of `inheritance` to create a blueprint for several schools. **You should be running the tests after each step with `npm test`.**
 
 ## Instructions
+
+**You will be writing all of your code in the `index.js` file.  The class names have already been provided for you.  You will be adding logic to the class definitions in this file**
 
 ### Step 1
 
 In the `School` class:
 
-- set up a constructor that accepts a `schoolName` and `level`.
-- store these in the constructor as class properties.
-- set up a property called `students`. Set this to an empty array.
-- create an `enrollStudent` method. It should accept a `student` as an argument.
-- create a method called `listEnrollmentNumbers`. This method will not accept any arguments.
+- set up a constructor that accepts `schoolName` and `level` parameters.
+- store these parameters in the constructor as class properties.
+- set up a property called `students` and set it equal to an empty array.
+- create an `enrollStudent` method. It should accept a `student` as a parameter.
+- create a method called `listEnrollmentNumbers`. This method will not accept any parameters.
 
 ### Step 2
 
 In the `High` class:
 
-- inherit the `School` class:
-- Set up a constructor that accepts a `name` as an argument.
-- Make sure to call `super` in the constructor.
+- inherit from the `School` class:
+  - Make sure to call `super` in the constructor.
+- Add a `name` parameter to the constructor.
 - Pass the `name` and hard code in a level in the `super` method. (Order matters, name should go first)
 - create a property called `sportsTeams`. Set this to an empty array.
-- create a method called `addTeam`, this should accept 1 argument called `team`
+- create a method called `addTeam`, this should have a parameter of `team`
 
 ### Step 3
 
 In the `Middle` class:
 
-- inherit the `School` class
+- inherit from the `School` class
 - set up a constructor that accepts `name` as an argument
 - make sure to call `super` in the constructor
-- pass the `name` argument to super and hard code in a `level`. (Order Matters)
+- pass the `name` parameter to super and hard code value for the `level` parameter. (Order Matters)
 
 ### Step 4
 
 In the `Primary` class:
 
-- inherit the `School` class
-- set up a constructor that accepts `name` and `pickUpPolicy` as arguments
-- make sure to call `super` in the constructor
-- pass the `name` argument to super and hard code in a `level`. (Order Matters)
+- inherit from the `School` class
+- set up a constructor that accepts `name` and `pickUpPolicy` parameters
+  - make sure to call `super` in the constructor
+  - pass the `name` parameter to super and hard code a value for the `level` parameter. (Order Matters)
 - store the `pickUpPolicy` as a class property and set it to the `pickUpPolicy` argument
 - create a method called `listPickUpPolicy`
 
@@ -63,22 +65,22 @@ In the `Student` class:
 
 ### Step 6
 
-In the `School` class:
+Back in the `School` class:
 
 - The `enrollStudent` method should add a `student` to our `students` array.
 - `listEnrollmentNumbers` should return the number of students in our `students` array.
 
 ### Step 7
 
-In the `High` class:
+Back in the `High` class:
 
 - the `addTeam` method should add a `team` to our `sportsTeams` array.
 
 ### Step 8
 
-In the `Primary` class:
+Back in the `Primary` class:
 
-- `listPickUpPolicy` should return the following string: `You must pick up your child at <Whatever the pickup policy is>!`. Make sure to replace the contents in `<>` with your pickup policy property. **Make sure to remove the `<>`!**
+- `listPickUpPolicy` should return the following string: `You must pick up your child at <pickUpPolicy>!`. Make sure to replace the contents in `<>` with your pickup policy property. **Make sure to remove the `<>`!**
 
 ### Step 9
 
@@ -96,9 +98,9 @@ const { High, Middle, Primary, SportsTeam, Student } = require('.')
 
 The classes you've built have been loaded into this file for you. **DO NOT MODIFY LINE 1.**
 
-- Create a new instance of the `High` class.
+- Create an instance of the `High` class.
 - Create `5` new students with the `Student` class.
-- Add the `5` new students to the `students` property in the new instance of the `High` class. \*We inherited from the `School` class which means we have access to the `enrollStudent` method.
+- Add the `5` students to the `students` property in the instance of the `High` class. \*We inherited from the `School` class which means we have access to the `enrollStudent` method.
 - Create `2` new sports teams. Add these to the instance of the `High` class you created utilzing the `addTeam` method.
 - `console.log` your instance of the `High` class.
 - Run the `playground.js` file with `node playground.js` in your terminal.
